@@ -1,0 +1,1377 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7ee0d6;
+}
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+.inner {
+  max-width: 1200px;
+  padding: 5% 5%;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url(../img/background/header1.jpg);
+  background-position: 80% 80%;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(140, 8, 78, 0.662745098);
+  border-bottom: 0.5px solid #ff46a9;
+}
+.header nav .logo {
+  width: 60px;
+}
+.header nav .logo img {
+  width: 100%;
+}
+.header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header nav ul li {
+  padding-right: 20px;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+.header nav ul li a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #ffc02c;
+  text-transform: uppercase;
+  transition: 0.5s linear;
+}
+.header nav ul li a:hover::before {
+  content: "";
+  width: 78%;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffc02c;
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  -webkit-animation: fil 1s ease infinite alternate;
+          animation: fil 1s ease infinite alternate;
+}
+@-webkit-keyframes fil {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 78%;
+  }
+}
+@keyframes fil {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 78%;
+  }
+}
+.header nav ul li a:hover::after {
+  content: "";
+  width: 78%;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffc02c;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  -webkit-animation: fill 1s ease infinite alternate;
+          animation: fill 1s ease infinite alternate;
+}
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 78%;
+  }
+}
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 78%;
+  }
+}
+.header nav ul li a:hover, .header nav ul li .active {
+  color: #d0d0d8;
+}
+.header nav .sign {
+  color: #ffc02c;
+  background: none;
+  padding: 3px 20px;
+  border: 1px solid #ffc02c;
+  outline: none;
+  border-radius: 4px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.header nav .sign:hover {
+  background-color: #ffc02c;
+  color: #8c084e;
+  border: 1px solid #8c084e;
+}
+.header nav .popup {
+  width: 300px;
+  height: 350px;
+  background-color: rgba(126, 224, 214, 0.7137254902);
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  visibility: hidden;
+  transition: transform 0.5s, top 0.5s;
+}
+.header nav .popup span img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+.header nav .popup p {
+  font-size: 0.6rem;
+  margin-bottom: 20px;
+  color: #8c084e;
+}
+.header nav .popup a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: #8c084e;
+  font-weight: 700;
+}
+.header nav .popup input {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* border: 1px solid #fff; */
+  border: none;
+  background: #8c084e;
+  color: #ffc02c;
+}
+.header nav .popup button {
+  margin: 0 auto;
+  width: 120px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #8c084e;
+  background: #ffc02c;
+  transition: all 0.3s linear;
+}
+.header nav .popup button:hover {
+  color: #ffc02c;
+  background: #8c084e;
+}
+.header nav .open-popup {
+  visibility: visible;
+  top: 500%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.header nav .menu {
+  color: #ffc02c;
+  background: none;
+  border: none;
+  display: none;
+}
+.header .hero {
+  padding-top: 7%;
+  padding-left: 15%;
+}
+.header .hero img {
+  width: 375px;
+  margin: 0;
+  padding: 0;
+}
+.header .hero h2 {
+  padding-left: 4rem;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: #d0d0d8;
+  position: absolute;
+  top: 59%;
+}
+.header .hero h1 {
+  padding-left: 6rem;
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: #ffc02c;
+}
+.header .sd1 {
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  z-index: 1;
+}
+
+.story {
+  width: 100%;
+  background-image: url(../img/background/storyback.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 5rem 0;
+}
+.story h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #8c084e;
+}
+.story .stroybox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.story .stroybox .details {
+  width: 60%;
+  padding-right: 1.5rem;
+}
+.story .stroybox .details h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8c084e;
+  margin-bottom: 0.6rem;
+}
+.story .stroybox .details p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #8c084e;
+  margin-bottom: 0.6rem;
+}
+.story .stroybox .image {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+.story .stroybox .image img {
+  width: 70%;
+}
+.story .sd2 {
+  width: 90%;
+  position: absolute;
+  top: 30%;
+  right: 0%;
+}
+
+.product {
+  width: 100%;
+  background-image: url(../img/background/productback1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #d0d0d8;
+}
+.product .product-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .product-details .canimage {
+  width: 50%;
+  height: 55vh;
+  background-image: url(../img/pcan/pcan1.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: background-image 2s;
+}
+.product .product-details .candetails {
+  width: 50%;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+.product .product-details .candetails h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d0d0d8;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 0.4rem;
+  transition: 4s linear;
+}
+.product .product-details .candetails p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #d0d0d8;
+  transition: 4s linear;
+}
+.product .product-details .splashimage {
+  width: 50%;
+  height: 55vh;
+  background-image: url(../img/splash/png/splash1.png);
+  background-position: center;
+  background-size: cover;
+  background-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  transition: background-image 2s;
+}
+.product ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.product ul li {
+  list-style-type: none;
+}
+.product ul li button {
+  background: none;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
+.product ul li button img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.product ul li button img:hover {
+  transform: translateY(-8px);
+}
+
+.shop {
+  width: 100%;
+  background-image: url(../img/background/shopback1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.shop h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #d0d0d8;
+  margin-bottom: 10px;
+}
+.shop .shopdrink {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shop .shopdrink .box {
+  width: 23%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.shop .shopdrink .box img {
+  width: 100%;
+  border-radius: 20px;
+}
+.shop .shopdrink .box .text {
+  color: #8c084e;
+}
+.shop .shopdrink .box .text h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.shop .shopdrink .box .text i {
+  font-size: 0.6rem;
+  margin-right: 5px;
+}
+.shop .shopdrink .box .text span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.shop .shopdrink .box a {
+  text-decoration: none;
+  transition: 2s linear;
+}
+.shop .shopdrink .box a .sc {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  background-color: #8c084e;
+  color: #ffc02c;
+  padding: 10px;
+  border-radius: 20px;
+}
+.shop .shopdrink .box a, .shop .shopdrink .box .sc:hover {
+  background-color: #ffc02c;
+  color: #8c084e;
+}
+
+.contact {
+  width: 100%;
+  background-image: url(../img/background/contactback.png);
+  background-position: center;
+  background-size: cover;
+}
+.contact h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #8c084e;
+  margin-bottom: 10px;
+}
+.contact .contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .contact-details form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid #8c084e;
+  border-radius: 20px;
+  padding: 30px;
+}
+.contact .contact-details form h5 {
+  font-size: 0.8rem;
+  color: #8c084e;
+  margin-bottom: 20px;
+}
+.contact .contact-details form input, .contact .contact-details form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #8c084e;
+  background: none;
+  color: #8c084e;
+  outline: none;
+}
+.contact .contact-details form input:focus {
+  background-color: transparent;
+  color: #8c084e;
+  box-shadow: none;
+}
+.contact .contact-details form input:-webkit-autofill,
+.contact .contact-details form input:-webkit-autofill:hover,
+.contact .contact-details form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #8c084e;
+  -webkit-box-shadow: 0 0 0 1000px rgba(223, 223, 223, 0) inset !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.contact .contact-details form .btn {
+  width: 120px;
+  height: 40px;
+  background-color: #8c084e;
+  border: none;
+  color: #ffc02c;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.contact .contact-details form .btn:hover {
+  background-color: #ffc02c;
+  color: #8c084e;
+  border: 1px solid #8c084e;
+}
+.contact .contact-details .contact-map {
+  width: 45%;
+}
+.contact .contact-details .contact-map iframe {
+  width: 100%;
+  border-radius: 20px;
+}
+
+footer {
+  width: 100%;
+  background-image: url(../img/background/ssplash.png);
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer .copy {
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: 100px;
+}
+footer h4 {
+  font-size: 1rem;
+  color: #8c084e;
+  margin-bottom: 10px;
+}
+footer h6 {
+  font-size: 0.8rem;
+  color: #8c084e;
+  margin-bottom: 10px;
+}
+footer .social-media {
+  color: #8c084e;
+}
+footer .footer-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-details .logo {
+  width: 80px;
+}
+footer .about {
+  margin-top: 20px;
+}
+footer .about a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #8c084e;
+}
+footer .payment {
+  color: #8c084e;
+}
+footer .payment h5 {
+  margin-bottom: 10px;
+}
+
+.cartheader {
+  background-image: url(../img/background/cartbanner3.png);
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+}
+.cartheader .carthero {
+  padding: 15% 0 20% 0;
+}
+.cartheader .carthero h2 {
+  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: #ffc02c;
+  text-align: center;
+}
+
+.cart .inner {
+  overflow: auto;
+}
+.cart .inner h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.cart .inner table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  table-layout: fixed;
+  border: 1px solid #8c084e;
+  background-color: #ffc02c;
+}
+.cart .inner table thead {
+  border: 1px solid #8c084e;
+  border-left: none;
+  border-right: none;
+}
+.cart .inner table thead td {
+  font-weight: 700;
+  padding: 18px 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.cart .inner table tbody td {
+  font-size: 0.7rem;
+  padding-top: 15px;
+}
+.cart .inner table tbody td i {
+  margin-right: 3px;
+}
+.cart .inner table td:nth-child(1) {
+  width: 10%;
+  text-align: center;
+}
+.cart .inner table td:nth-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.cart .inner table td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}
+.cart .inner table td:nth-child(4),
+.cart .inner table td:nth-child(5),
+.cart .inner table td:nth-child(6) {
+  width: 15%;
+  text-align: center;
+}
+.cart .inner table td:nth-child(4) input {
+  width: 50px;
+  padding: 5px 5px 5px 5px;
+  outline: none;
+  border: none;
+}
+.cart .inner table img {
+  width: 70px;
+}
+
+.billing .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.billing .inner .total {
+  width: 45%;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #8c084e;
+}
+.billing .inner .total table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.billing .inner .total table td {
+  width: 50%;
+  border: 1px solid #8c084e;
+  font-size: 0.7rem;
+  padding: 10px;
+}
+.billing .inner .total button {
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: #8c084e;
+  color: #ffc02c;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.billing .inner .total button:hover {
+  background-color: #ffc02c;
+  color: #8c084e;
+  border: 1px solid #8c084e;
+}
+.billing .inner .coupon {
+  width: 45%;
+  margin-bottom: 30px;
+}
+.billing .inner .coupon h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.billing .inner .coupon input {
+  padding: 10px 20px;
+  width: 60%;
+  margin-right: 10px;
+  outline: none;
+  border: 1px solid #e2e9e1;
+  border-radius: 4px;
+}
+.billing .inner .coupon button {
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #8c084e;
+  color: #ffc02c;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.billing .inner .coupon button:hover {
+  background-color: #ffc02c;
+  color: #8c084e;
+  border: 1px solid #8c084e;
+}
+
+@media only screen and (max-width: 799px) {
+  .header {
+    background-image: url(../img/background/header1.jpg);
+    background-position: 74% 80%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    background: rgba(140, 8, 78, 0.662745098);
+    left: 0px;
+    padding-left: 30px;
+    display: none;
+  }
+  .header nav ul li a:hover::before, .header nav ul li a:hover::after {
+    display: none;
+  }
+  .header nav .sign {
+    position: relative;
+    left: 35%;
+  }
+  .header nav .menu {
+    color: #ffc02c;
+    background: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+  }
+  .header nav .menu:hover {
+    color: #d0d0d8;
+  }
+  .header .hero {
+    padding-top: 7%;
+    padding-left: 15%;
+  }
+  .header .hero img {
+    display: none;
+  }
+  .header .hero h2 {
+    padding-left: 4rem;
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #d0d0d8;
+    position: absolute;
+    top: 7%;
+  }
+  .header .hero h1 {
+    padding-left: 6rem;
+    font-size: 4rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #ffc02c;
+    position: absolute;
+    top: 12%;
+  }
+  .header .sd1 {
+    width: 100%;
+    position: absolute;
+    top: 86%;
+    z-index: 1;
+  }
+  .story .stroybox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .story .stroybox .details {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .story .stroybox .details h4 {
+    font-size: 1.2rem;
+  }
+  .story .stroybox .details p {
+    font-size: 1rem;
+    text-justify: distribute;
+  }
+  .story .stroybox .image {
+    width: 70%;
+  }
+  .story .stroybox .image img {
+    width: 100%;
+  }
+  .story .sd2 {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    right: 0%;
+  }
+  .product .product-details .canimage {
+    width: 100%;
+  }
+  .product .product-details .candetails {
+    padding: 0 0.4rem;
+  }
+  .product .product-details .candetails p {
+    font-size: 0.5rem;
+  }
+  .product .product-details .splashimage {
+    width: 100%;
+  }
+  .product ul {
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+  }
+  .shop .shopdrink .box {
+    width: 45%;
+  }
+  .contact .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .contact .contact-details form {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .contact .contact-details .contact-map {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .contact .contact-details .contact-map iframe {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .cartheader {
+    background-image: url(../img/background/cartbanner3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .cartheader .carthero {
+    padding: 50% 0 20% 0;
+  }
+  .cartheader .carthero h2 {
+    font-size: 5rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #ffc02c;
+    text-align: center;
+  }
+  .cart .inner {
+    overflow: auto;
+  }
+  .cart .inner h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .cart .inner table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    table-layout: fixed;
+    border: 1px solid #8c084e;
+    background-color: #ffc02c;
+  }
+  .cart .inner table thead {
+    border: 1px solid #8c084e;
+    border-left: none;
+    border-right: none;
+  }
+  .cart .inner table thead td {
+    font-weight: 700;
+    padding: 18px 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+  .cart .inner table tbody td {
+    font-size: 0.7rem;
+    padding-top: 15px;
+  }
+  .cart .inner table tbody td i {
+    margin-right: 3px;
+  }
+  .cart .inner table td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(2) {
+    width: 15%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(3) {
+    width: 25%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(4),
+.cart .inner table td:nth-child(5),
+.cart .inner table td:nth-child(6) {
+    width: 15%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(4) input {
+    width: 50px;
+    padding: 5px 5px 5px 5px;
+    outline: none;
+    border: none;
+  }
+  .cart .inner table img {
+    width: 70px;
+  }
+  .billing .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .billing .inner .total {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #8c084e;
+  }
+  .billing .inner .total table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .billing .inner .total table td {
+    width: 50%;
+    border: 1px solid #8c084e;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  .billing .inner .total button {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #8c084e;
+    color: #ffc02c;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  .billing .inner .total button:hover {
+    background-color: #ffc02c;
+    color: #8c084e;
+    border: 1px solid #8c084e;
+  }
+  .billing .inner .coupon {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .billing .inner .coupon h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .billing .inner .coupon input {
+    padding: 10px 20px;
+    width: 60%;
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #e2e9e1;
+    border-radius: 4px;
+  }
+  .billing .inner .coupon button {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #8c084e;
+    color: #ffc02c;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  .billing .inner .coupon button:hover {
+    background-color: #ffc02c;
+    color: #8c084e;
+    border: 1px solid #8c084e;
+  }
+}
+@media only screen and (max-width: 477px) {
+  .header {
+    background-image: url(../img/background/header1.jpg);
+    background-position: 68% 80%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    background: rgba(140, 8, 78, 0.662745098);
+    left: 0px;
+    padding-left: 30px;
+    display: none;
+  }
+  .header nav ul li a:hover::before, .header nav ul li a:hover::after {
+    display: none;
+  }
+  .header nav .sign {
+    padding: 3px 5px;
+    position: relative;
+    left: 30%;
+  }
+  .header nav .menu {
+    color: #ffc02c;
+    background: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+  }
+  .header nav .menu:hover {
+    color: #d0d0d8;
+  }
+  .header .hero {
+    padding-top: 7%;
+    padding-left: 0%;
+  }
+  .header .hero img {
+    display: none;
+  }
+  .header .hero h2 {
+    padding-left: 3rem;
+    font-size: 2.5rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #d0d0d8;
+    position: absolute;
+    top: 8%;
+  }
+  .header .hero h1 {
+    padding-left: 5rem;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #ffc02c;
+    position: absolute;
+    top: 12%;
+  }
+  .header .sd1 {
+    width: 100%;
+    position: absolute;
+    top: 91%;
+    z-index: 1;
+  }
+  .story h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8c084e;
+  }
+  .story .stroybox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .story .stroybox .details {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .story .stroybox .details h4 {
+    font-size: 0.8rem;
+  }
+  .story .stroybox .details p {
+    font-size: 0.6rem;
+    text-justify: distribute;
+  }
+  .story .stroybox .image {
+    width: 70%;
+  }
+  .story .stroybox .image img {
+    width: 100%;
+  }
+  .story .sd2 {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    right: 0%;
+  }
+  .product h1 {
+    font-size: 1.8rem;
+  }
+  .product .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .product .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .product .product-details .canimage {
+    width: 100%;
+    position: absolute;
+    left: -60%;
+    top: 0%;
+  }
+  .product .product-details .candetails {
+    width: 100%;
+    text-align: center;
+    padding: 0 0;
+    position: relative;
+    top: 70%;
+    left: -60%;
+  }
+  .product .product-details .candetails h3 {
+    font-size: 1.5rem;
+  }
+  .product .product-details .candetails p {
+    font-size: 0.5rem;
+  }
+  .product .product-details .splashimage {
+    width: 100%;
+    position: absolute;
+    left: -60%;
+    top: 25%;
+  }
+  .product ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .product ul li {
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+  .product ul li button {
+    background: none;
+    border: none;
+    width: 20px;
+    cursor: pointer;
+  }
+  .product ul li button img {
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  .product ul li button img:hover {
+    transform: translateY(-8px);
+  }
+  .shop .shopdrink .box {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    background-image: url(../img/background/ssplash.png);
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  footer .copy {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 100px;
+  }
+  footer h4 {
+    font-size: 1rem;
+    color: #8c084e;
+    margin-bottom: 10px;
+  }
+  footer h6 {
+    font-size: 0.8rem;
+    color: #8c084e;
+    margin-bottom: 10px;
+  }
+  footer h6 span {
+    font-weight: 500;
+  }
+  footer .social-media {
+    color: #8c084e;
+  }
+  footer .footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  footer .footer-details .logo {
+    width: 80px;
+  }
+  footer .about {
+    margin-top: 20px;
+  }
+  footer .about a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #8c084e;
+    font-weight: 500;
+  }
+  footer .payment {
+    color: #8c084e;
+  }
+  footer .payment h5 {
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .cartheader {
+    background-image: url(../img/background/cartbanner3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .cartheader .carthero {
+    padding: 60% 0 20% 0;
+  }
+  .cartheader .carthero h2 {
+    font-size: 5rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: #ffc02c;
+    text-align: center;
+  }
+  .cart .inner {
+    overflow: auto;
+  }
+  .cart .inner h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .cart .inner table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    table-layout: fixed;
+    border: 1px solid #8c084e;
+    background-color: #ffc02c;
+  }
+  .cart .inner table thead {
+    border: 1px solid #8c084e;
+    border-left: none;
+    border-right: none;
+  }
+  .cart .inner table thead td {
+    font-weight: 700;
+    padding: 18px 0;
+    font-size: 0.4rem;
+    text-transform: uppercase;
+  }
+  .cart .inner table tbody td {
+    font-size: 0.4rem;
+    padding-top: 15px;
+  }
+  .cart .inner table tbody td i {
+    margin-right: 3px;
+  }
+  .cart .inner table td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(2) {
+    width: 15%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(3) {
+    width: 25%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(4),
+.cart .inner table td:nth-child(5),
+.cart .inner table td:nth-child(6) {
+    width: 15%;
+    text-align: center;
+  }
+  .cart .inner table td:nth-child(4) input {
+    width: 25px;
+    padding: 2px 2px 2px 2px;
+    outline: none;
+    border: none;
+  }
+  .cart .inner table img {
+    width: 40px;
+  }
+  .billing .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .billing .inner .total {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #8c084e;
+  }
+  .billing .inner .total table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .billing .inner .total table td {
+    width: 50%;
+    border: 1px solid #8c084e;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  .billing .inner .total button {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #8c084e;
+    color: #ffc02c;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  .billing .inner .total button:hover {
+    background-color: #ffc02c;
+    color: #8c084e;
+    border: 1px solid #8c084e;
+  }
+  .billing .inner .coupon {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .billing .inner .coupon h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .billing .inner .coupon input {
+    padding: 10px 20px;
+    width: 60%;
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #e2e9e1;
+    border-radius: 4px;
+  }
+  .billing .inner .coupon button {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #8c084e;
+    color: #ffc02c;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  .billing .inner .coupon button:hover {
+    background-color: #ffc02c;
+    color: #8c084e;
+    border: 1px solid #8c084e;
+  }
+}/*# sourceMappingURL=style.css.map */

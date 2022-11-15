@@ -1,0 +1,1313 @@
+*{
+    margin: 0;
+    padding:0 ;
+    font-family:  'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #7ee0d6;
+    
+}
+html{
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+.inner{
+    max-width: 1200px;
+    padding: 5% 5%;
+    margin: 0 auto;
+}
+//=====variables===================
+ $mycolor1:#ffc02c;
+ $mycolor2:#8c084e;
+ $mycolor3:#d0d0d8;
+
+
+//=================header======================//
+@import "header";
+
+
+
+//================================story=================================//
+@import "story";
+
+
+//================================product=================================//
+@import "product";
+
+
+//================================shop=================================//
+
+@import "shop";
+
+//================================contact=================================//
+@import"contact";
+
+//================================footer=================================//
+@import"footer";
+
+
+
+
+//==========================================cart page========================================//
+    .cartheader{
+        background-image:url(../img/background/cartbanner3.png);
+        background-position:center;
+        background-size: 100%;
+        width: 100%;
+        
+        
+     
+
+        .carthero{
+            padding: 15% 0 20% 0;
+            
+           
+            h2{ 
+                font-size: 5rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor1;
+                text-align: center; 
+                
+            }
+            
+        }
+    }
+
+
+    //==========================cart===============================//
+    .cart{
+
+
+        .inner{
+            overflow: auto;
+
+
+            
+            h3{
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom:20px;
+            }
+
+           
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                white-space: nowrap;
+                table-layout: fixed; 
+                border:1px solid $mycolor2;
+                background-color: $mycolor1;
+
+
+
+                thead {
+                    border: 1px solid $mycolor2;
+                    border-left:none;
+                    border-right: none;
+
+                    td{
+                        font-weight: 700;
+                        padding: 18px 0;
+                        font-size: .7rem;
+                        text-transform: uppercase;
+                    }
+                      
+                   
+                }
+                tbody{
+                    td{
+                        font-size: .7rem;
+                        padding-top: 15px; 
+                        
+                        i{
+                            margin-right: 3px;
+                        }
+                    }
+                }
+
+                td:nth-child(1){
+                    width:10%;
+                    text-align: center;
+                    
+                }
+                td:nth-child(2){
+                    width: 15%;
+                    text-align: center;
+                    
+                }
+                td:nth-child(3){
+                    width:25%;
+                    text-align: center;
+                   
+                }
+                td:nth-child(4),
+                td:nth-child(5),
+                td:nth-child(6){
+                    width: 15%;
+                    text-align: center;
+                }
+
+                td:nth-child(4) input{
+                    width: 50px;
+                    padding: 5px 5px 5px 5px;
+                    outline: none;
+                    border: none;
+                }
+                
+                img{
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    .billing{
+        .inner{
+            display: flex;
+            // align-items: center;
+            justify-content: space-between;
+
+            .total{
+                width: 45%;
+                padding: 30px;
+                margin-bottom: 30px;
+                border: 1px solid $mycolor2;
+
+                table{
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    td{
+                        width: 50%;
+                        border: 1px solid $mycolor2;
+                        font-size: .7rem;
+                        padding: 10px;
+                    }
+                }
+                button{
+                    font-size: .6rem;
+                    font-weight: 600;
+                    padding: 5px 10px;
+                    background-color:$mycolor2;
+                    color: $mycolor1;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: .2s;
+                }
+                button:hover{
+                    background-color: $mycolor1;
+                    color: $mycolor2;
+                    border: 1px solid $mycolor2;
+                }
+                
+            }
+
+            .coupon{
+                width: 45%;
+                margin-bottom: 30px;
+
+                h3{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                input{
+                    padding: 10px 20px;
+                    width: 60%;
+                    margin-right: 10px;
+                    outline: none;
+                    border: 1px solid #e2e9e1;
+                    border-radius: 4px;
+                
+                }
+                button{
+                    font-size: .6rem;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    background-color:$mycolor2;
+                    color: $mycolor1;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: .2s;
+                }
+                button:hover{
+                    background-color: $mycolor1;
+                    color: $mycolor2;
+                    border: 1px solid $mycolor2;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+//=============mediaquery==========//
+@media only screen and (max-width:799px){
+    //------------------header-----------------//
+    .header{
+        background-image: url(../img/background/header1.jpg);
+        background-position: 74% 80%;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    
+    
+        nav{
+    
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                background: #8c084ea9;
+                left: 0px;
+                padding-left: 30px;
+                display: none;
+    
+                li{
+                   
+                    a:hover::before,a:hover::after{
+                        display: none;
+                    }
+                    
+                }
+            }
+            .sign{
+                position: relative;
+                left:35%;
+                
+               
+            }
+           
+            
+            .menu{
+                color: $mycolor1;
+                background: none;
+                border: none;
+                display: block;
+                cursor: pointer;
+               
+            }
+            .menu:hover{
+                color: $mycolor3;
+            }
+            
+    
+           
+        }
+    
+    
+        .hero{
+            padding-top: 7%;
+            padding-left: 15%;
+           
+    
+            img{
+                // width: 375px;
+                // margin: 0;
+                // padding: 0;
+                display: none;
+            }
+            h2{
+                padding-left: 4rem;
+                font-size: 3rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor3;
+                position: absolute;
+                top: 7%;
+                
+                
+            }
+            h1{
+                padding-left: 6rem;
+                font-size: 4rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor1;
+                position: absolute;
+                top: 12%;
+
+            }
+        }
+    
+        .sd1{
+            width: 100%;
+            position: absolute;
+            top:86%;
+            
+            z-index: 1;
+        }
+    
+    }
+
+   //================================story=================================//
+
+   .story{
+        .stroybox{
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: flex-start;
+        //   margin-top: 3rem;
+          
+
+            .details{
+                width: 100%;
+                margin-bottom:2rem;
+              
+
+              h4{
+                  font-size: 1.2rem;
+                }
+                p{
+                 font-size: 1rem;
+                 text-justify:distribute;
+                }
+            }
+            .image{
+                width: 70%;
+               img{
+                 width:100%;
+                
+                }
+            }
+
+
+        }
+        .sd2{
+           width: 100%;
+           position: absolute;
+           top: 70%;
+           right: 0%;
+        
+        }
+    
+    }
+
+
+
+   //================================product=================================//
+    // .product{
+    //     width: 100%;
+    //     background-image: url(../img/background/productback.png);
+    //     background-position: center;
+    //     background-size: cover;
+
+    //     h1{
+    //       font-size: 2.4rem;
+    //       font-weight: 700;
+    //       color:$mycolor3;
+    //     } 
+    //     .inner{
+    //         display: flex;
+    //         justify-content: space-between;
+            
+    //     }
+    
+    //     .product-details{
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: flex-start;
+    //         justify-content: flex-start;
+    //         position: relative;
+        
+
+
+    //         .canimage{
+    //             width:100%;
+    //             height: 55vh;
+    //             background-image: url(../img/pcan/pcan1.png);
+    //             background-position: center;
+    //             background-size: 100%;
+    //             background-repeat: no-repeat;
+    //             transition: background-image 2s;
+    //             position: absolute;
+    //             left: -60%;
+    //             top: 20%;
+            
+            
+            
+    //         }
+       
+    //         .candetails{
+    //             width: 100%;
+    //             text-align: center;
+    //             padding: 0 1.5rem;
+    //             position: relative;
+    //             top: 65%;
+    //             left: -20%;
+                
+            
+
+
+    //             h3{
+    //                 font-size: 2rem;
+    //                 font-weight: 700;
+    //                 color: $mycolor3;
+    //                 font-family:'Dancing Script', cursive ;
+    //                 margin-bottom: .4rem;
+    //                 transition: 4s linear;
+    //             }
+
+
+    //             p{
+    //             font-size: 1rem;
+    //             font-weight: 400;
+    //             color: $mycolor3;
+    //             transition: 4s linear;
+    //             }
+    //         }
+
+    //         .splashimage{
+    //             width: 100%;
+    //             height: 55vh;
+    //             background-image: url(../img/splash/splash1.png);
+    //             background-position: center;
+    //             background-size: cover;
+    //             background-size:100%;
+    //             object-fit: cover;
+    //             background-repeat: no-repeat;
+    //             transition: background-image 2s;
+    //             position: absolute;
+    //             left: 0;
+    //             top: 20%;
+    //         }
+       
+    //     }
+
+    //     ul{
+    //         display: flex;
+    //         align-items: flex-start;
+    //         justify-content: flex-start;
+    //         flex-direction: column;
+    //         margin-top: 1rem;
+
+    //         li{
+    //             list-style-type: none;
+    //             margin-top: 1rem;
+
+    //             button{
+    //                 background: none;
+    //                 border: none;
+    //                 width: 50px;
+    //                 cursor: pointer;
+
+    //                 img{
+    //                     width: 100%;
+    //                     transition: 0.5s ease;
+    //                 }
+    //                 img:hover{
+    //                     transform: translateY(-8px);
+    //                 }
+
+    //             }
+    //         }
+    //     }
+    // }  
+    
+    //-----------------extra product--------------//
+    .product{
+        
+        .product-details{
+            .canimage{
+                width:100%;  
+                
+            }
+            .candetails{
+                padding: 0 .4rem;
+    
+                p{
+                  font-size: .5rem;
+                }
+            }
+            .splashimage{
+                width: 100%;   
+            }
+           
+        }
+        ul{
+          
+            margin-top: -2rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+
+     //================================shop=================================//
+
+    .shop{
+        .shopdrink{
+            .box{
+                width: 45%;
+                
+            }
+        }
+    }
+
+
+    //================================contact=================================//
+    .contact{
+        .contact-details{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+
+            form{
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            .contact-map{
+                width: 100%;
+                border-radius: 20px;
+
+                iframe{
+                    width: 100%;
+                    border-radius: 20px;
+                    
+                }
+            }
+        }
+    }
+
+    //==========================================cart page========================================//
+    .cartheader{
+        background-image:url(../img/background/cartbanner3.png);
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        
+    
+
+        .carthero{
+            padding: 50% 0 20% 0;
+        
+            h2{ 
+                font-size: 5rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor1;
+                text-align: center; 
+            }
+            
+        }
+    }
+
+//==========================cart===============================//
+    .cart{
+
+
+        .inner{
+            overflow: auto;
+
+
+                
+            h3{
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom:20px;
+            }
+
+            
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                white-space: nowrap;
+                table-layout: fixed; 
+                border:1px solid $mycolor2;
+                background-color: $mycolor1;
+
+
+
+                thead {
+                    border: 1px solid $mycolor2;
+                    border-left:none;
+                    border-right: none;
+
+                    td{
+                        font-weight: 700;
+                        padding: 18px 0;
+                        font-size: .7rem;
+                        text-transform: uppercase;
+                    }
+                        
+                    
+                }
+                tbody{
+                    td{
+                        font-size: .7rem;
+                        padding-top: 15px; 
+                            
+                          i{
+                             margin-right: 3px;
+                            }
+                        }
+                    }
+
+                td:nth-child(1){
+                    width:10%;
+                    text-align: center;
+                        
+                }
+                td:nth-child(2){
+                    width: 15%;
+                    text-align: center;
+                        
+                }
+                td:nth-child(3){
+                    width:25%;
+                    text-align: center;
+                    
+                }
+                td:nth-child(4),
+                td:nth-child(5),
+                td:nth-child(6){
+                    width: 15%;
+                    text-align: center;
+                }
+
+                td:nth-child(4) input{
+                    width: 50px;
+                    padding: 5px 5px 5px 5px;
+                    outline: none;
+                    border: none;
+                }
+                    
+                img{
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    .billing{
+            .inner{
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content:flex-start;
+
+                .total{
+                    width: 100%;
+                    padding: 30px;
+                    margin-bottom: 30px;
+                    border: 1px solid $mycolor2;
+
+                    table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        td{
+                            width: 50%;
+                            border: 1px solid $mycolor2;
+                            font-size: .7rem;
+                            padding: 10px;
+                        }
+                    }
+                    button{
+                        font-size: .6rem;
+                        font-weight: 600;
+                        padding: 5px 10px;
+                        background-color:$mycolor2;
+                        color: $mycolor1;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: .2s;
+                    }
+                    button:hover{
+                        background-color: $mycolor1;
+                        color: $mycolor2;
+                        border: 1px solid $mycolor2;
+                    }
+                    
+                }
+
+                .coupon{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    
+
+                    h3{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                    }
+
+                    input{
+                        padding: 10px 20px;
+                        width: 60%;
+                        margin-right: 10px;
+                        outline: none;
+                        border: 1px solid #e2e9e1;
+                        border-radius: 4px;
+                    
+                    }
+                    button{
+                        font-size: .6rem;
+                        font-weight: 600;
+                        padding: 10px 20px;
+                        background-color:$mycolor2;
+                        color: $mycolor1;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: .2s;
+                    }
+                    button:hover{
+                        background-color: $mycolor1;
+                        color: $mycolor2;
+                        border: 1px solid $mycolor2;
+                    }
+                }
+            }
+    }
+
+}
+
+
+    
+
+
+
+@media only screen and (max-width:477px){
+    //------------------header-----------------//
+    .header{
+        background-image: url(../img/background/header1.jpg);
+        background-position: 68% 80%;
+        background-size:cover;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    
+    
+        nav{
+    
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                background: #8c084ea9;
+                left: 0px;
+                padding-left: 30px;
+                display: none;
+    
+                li{
+                   
+                    a:hover::before,a:hover::after{
+                        display: none;
+                    }
+                    
+                }
+            }
+            .sign{
+                padding: 3px 5px;
+                position: relative;
+                left:30%;
+                
+               
+            }
+           
+            
+            .menu{
+                color: $mycolor1;
+                background: none;
+                border: none;
+                display: block;
+                cursor: pointer;
+               
+            }
+            .menu:hover{
+                color: $mycolor3;
+            }
+            
+    
+           
+        }
+    
+    
+        .hero{
+            padding-top: 7%;
+            padding-left: 0%;
+           
+    
+            img{
+                // width: 375px;
+                // margin: 0;
+                // padding: 0;
+                display: none;
+            }
+            h2{
+                padding-left: 3rem;
+                font-size:2.5rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor3;
+                position: absolute;
+                top: 8%;
+                
+                
+            }
+            h1{
+                padding-left: 5rem;
+                font-size: 3.5rem;
+                font-family: 'Dancing Script', cursive;
+                font-weight:700;
+                color: $mycolor1;
+                position: absolute;
+                top: 12%;
+
+            }
+        }
+    
+        .sd1{
+            width: 100%;
+            position: absolute;
+            top:91%;
+            z-index: 1;
+        }
+    
+    }
+
+
+    //================================story=================================//
+
+    .story{
+        h1{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $mycolor2;
+            
+        }    
+    
+        .stroybox{
+           display: flex;
+           align-items: flex-start;
+           flex-direction: column;
+           justify-content: flex-start;
+           //   margin-top: 3rem;
+        
+
+            .details{
+                width: 100%;
+                margin-bottom:2rem;
+                text-align: center;
+            
+
+            h4{
+                font-size: .8rem;
+                }
+                p{
+                font-size: .6rem;
+                text-justify:distribute;
+                }
+            }
+            .image{
+                width: 70%;
+            img{
+                width:100%;
+                
+                }
+            }
+
+
+        }
+        .sd2{
+        width: 100%;
+        position: absolute;
+        top: 80%;
+        right: 0%;
+        
+        }
+
+    }
+
+    //================================product=================================//
+    .product{
+
+        h1{
+          font-size: 1.8rem;
+          
+        } 
+        .inner{
+            display: flex;
+            justify-content: space-between;  
+        }
+    
+        .product-details{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: relative;
+        
+            .canimage{
+                width:100%;
+                position: absolute;
+                left: -60%;
+                top: 0%;
+             
+            }
+       
+            .candetails{
+                width: 100%;
+                text-align: center;
+                padding: 0 0;
+                position: relative;
+                top: 70%;
+                left: -60%;
+                
+                h3{
+                    font-size: 1.5rem;
+                }
+
+                p{
+                font-size: .5rem;
+                }
+            }
+
+            .splashimage{
+                width:100%;
+                position: absolute;
+                left: -60%;
+                top: 25%;
+            }
+       
+        }
+
+        ul{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-top: 1rem;
+            
+
+
+            li{
+                list-style-type: none;
+                margin-top: 1rem;
+
+                button{
+                    background: none;
+                    border: none;
+                    width: 20px;
+                    cursor: pointer;
+
+                    img{
+                        width: 100%;
+                        transition: 0.5s ease;
+                    }
+                    img:hover{
+                        transform: translateY(-8px);
+                    }
+
+                }
+            }
+        }
+    }  
+   //================================shop=================================//
+
+    .shop{
+        .shopdrink{
+            .box{
+                width: 100%;
+                
+            }
+        }
+    } 
+
+
+   //================================footer=================================//
+    footer{
+        width: 100%;
+        background-image: url(../img/background/ssplash.png);
+        background-position:100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+
+        .copy{
+            text-align: center;
+            font-size: .6rem;
+            margin-top: 100px;
+        }
+        h4{
+            font-size: 1rem;
+            color: $mycolor2;
+            margin-bottom:10px;
+        }
+        h6{
+            font-size: .8rem;
+            color: $mycolor2;
+            margin-bottom: 10px;
+
+            span{
+                font-weight: 500;
+            }
+        }
+        
+        .social-media{
+            color: $mycolor2;
+        }
+        
+        .footer-details{
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+
+            .logo{
+                width: 80px;
+
+            }
+        
+        }
+        .about{
+            margin-top: 20px;
+
+            a{
+                text-decoration: none;
+                font-size: .8rem;
+                color: $mycolor2;
+                font-weight: 500;
+            }
+        }
+
+        .payment{
+            color: $mycolor2;
+            
+
+            h5{
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+
+
+
+    //==========================================cart page========================================//
+.cartheader{
+    background-image:url(../img/background/cartbanner3.png);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+ 
+
+    .carthero{
+        padding: 60% 0 20% 0;
+       
+        h2{ 
+            font-size: 5rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight:700;
+            color: $mycolor1;
+            text-align: center; 
+        }
+        
+    }
+}
+
+//==========================cart===============================//
+    .cart{
+
+
+        .inner{
+            overflow: auto;
+
+
+            
+            h3{
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom:20px;
+            }
+
+        
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                white-space: nowrap;
+                table-layout: fixed; 
+                border:1px solid $mycolor2;
+                background-color: $mycolor1;
+                // overflow: auto;
+
+
+
+                thead {
+                    border: 1px solid $mycolor2;
+                    border-left:none;
+                    border-right: none;
+
+                    td{
+                        font-weight: 700;
+                        padding: 18px 0;
+                        font-size: .4rem;
+                        text-transform: uppercase;
+                    }
+                    
+                
+                }
+                tbody{
+                    td{
+                        font-size: .4rem;
+                        padding-top: 15px; 
+                        
+                        i{
+                            margin-right: 3px;
+                        }
+                    }
+                }
+
+                td:nth-child(1){
+                    width:10%;
+                    text-align: center;
+                    
+                }
+                td:nth-child(2){
+                    width: 15%;
+                    text-align: center;
+                    
+                }
+                td:nth-child(3){
+                    width:25%;
+                    text-align: center;
+                
+                }
+                td:nth-child(4),
+                td:nth-child(5),
+                td:nth-child(6){
+                    width: 15%;
+                    text-align: center;
+                }
+
+                td:nth-child(4) input{
+                    width: 25px;
+                    padding: 2px 2px 2px 2px;
+                    outline: none;
+                    border: none;
+                }
+                
+                img{
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    .billing{
+        .inner{
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content:flex-start;
+
+            .total{
+                width: 100%;
+                padding: 30px;
+                margin-bottom: 30px;
+                border: 1px solid $mycolor2;
+
+                table{
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    td{
+                        width: 50%;
+                        border: 1px solid $mycolor2;
+                        font-size: .7rem;
+                        padding: 10px;
+                    }
+                }
+                button{
+                    font-size: .6rem;
+                    font-weight: 600;
+                    padding: 5px 10px;
+                    background-color:$mycolor2;
+                    color: $mycolor1;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: .2s;
+                }
+                button:hover{
+                    background-color: $mycolor1;
+                    color: $mycolor2;
+                    border: 1px solid $mycolor2;
+                }
+                
+            }
+
+            .coupon{
+                width: 100%;
+                margin-bottom: 30px;
+                
+
+                h3{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+
+                input{
+                    padding: 10px 20px;
+                    width: 60%;
+                    margin-right: 10px;
+                    outline: none;
+                    border: 1px solid #e2e9e1;
+                    border-radius: 4px;
+                
+                }
+                button{
+                    font-size: .6rem;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    background-color:$mycolor2;
+                    color: $mycolor1;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: .2s;
+                }
+                button:hover{
+                    background-color: $mycolor1;
+                    color: $mycolor2;
+                    border: 1px solid $mycolor2;
+                }
+            }
+        }
+    }
+
+}

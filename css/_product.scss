@@ -1,0 +1,98 @@
+.product{
+    width: 100%;
+    background-image: url(../img/background/productback1.jpg);
+    background-position: center;
+    background-size: cover;
+
+    h1{
+        font-size: 2.4rem;
+        font-weight: 700;
+        color:$mycolor3;
+    } 
+    
+    .product-details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+
+        .canimage{
+            width:50%;
+            height: 55vh;
+            background-image: url(../img/pcan/pcan1.png);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: background-image 2s;
+            
+            
+            
+        }
+       
+        .candetails{
+            width: 50%;
+            text-align: center;
+            padding: 0 1.5rem;
+            
+
+
+            h3{
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $mycolor3;
+                font-family:'Dancing Script', cursive ;
+                margin-bottom: .4rem;
+                transition: 4s linear;
+            }
+
+
+            p{
+              font-size: .7rem;
+              font-weight: 400;
+              color: $mycolor3;
+              transition: 4s linear;
+            }
+        }
+
+        .splashimage{
+            width: 50%;
+            height: 55vh;
+            background-image: url(../img/splash/png/splash1.png);
+            background-position: center;
+            background-size: cover;
+            background-size:100%;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            transition: background-image 2s;
+        }
+       
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        li{
+            list-style-type: none;
+
+            button{
+                background: none;
+                border: none;
+                width: 50px;
+                cursor: pointer;
+
+                img{
+                    width: 100%;
+                    transition: 0.5s ease;
+                }
+                img:hover{
+                    transform: translateY(-8px);
+                }
+
+            }
+        }
+    }
+}

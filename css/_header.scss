@@ -1,0 +1,246 @@
+.header{
+    background-image: url(../img/background/header1.jpg);
+    background-position: 80% 80%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 25px;
+        position: fixed;
+        z-index: 1000;
+        background-color: #8c084ea9;
+        border-bottom: 0.5px solid #ff46a9;
+        
+        
+        
+        
+        
+
+        .logo{
+            width: 60px;
+
+            img{
+                width: 100%;
+            }
+        }
+       
+
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li{
+                padding-right: 20px;
+                list-style: none;
+                cursor: pointer;
+                position: relative;
+
+                a{
+                    text-decoration: none;
+                    font-size:.7rem ;
+                    font-weight: 500;
+                    color: $mycolor1;
+                    text-transform:uppercase ;
+                    transition: 0.5s linear;
+                    // position: relative;
+                    // z-index: 1;
+                
+                }
+                a:hover::before{
+                    content: '';
+                    width: 78%;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: $mycolor1;
+                    position: absolute;
+                    top: 20%;
+                    right:25%;
+                    animation:fil 1s ease infinite alternate;
+                    // z-index: 0;
+                    
+                }
+                @keyframes fil{
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 78%;
+                    }
+                }
+                a:hover::after{
+                    content: '';
+                    width: 78%;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: $mycolor1;
+                    position: absolute;
+                    top: 85%;
+                    left: 0;
+                    animation:fill 1s ease infinite alternate;
+                    // z-index: 0;
+                    
+                }
+                @keyframes fill{
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 78%;
+                    }
+                }
+
+                a:hover,.active{
+                    color: $mycolor3;
+                    
+                }
+            }
+        }
+        .sign{
+            color: $mycolor1;
+            background: none;
+            padding: 3px 20px;
+            border: 1px solid $mycolor1;
+            outline: none;
+            border-radius: 4px;
+            transition: 0.3s linear;
+            cursor: pointer;
+           
+        }
+        .sign:hover{
+            background-color: $mycolor1;
+            color: $mycolor2;
+            border: 1px solid $mycolor2;
+        }
+        
+        .popup{
+            width: 300px;
+            height: 350px;
+            background-color: #7ee0d6b6;
+            // box-shadow: 0 4px 30px rgba(0,0,0,0,0.1);
+            border-radius: 6px;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            text-align: center;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            visibility: hidden;
+            transition: transform 0.5s, top 0.5s;
+
+
+            span img{
+                width: 80px;
+                margin-bottom: 20px;
+                  
+            }
+
+            p{
+                font-size: .6rem;
+                margin-bottom: 20px;
+                color:$mycolor2;
+            }
+            a{
+                text-decoration: none;
+                margin-left: 10px;
+                color: $mycolor2;
+                font-weight: 700;
+            }
+            input{
+                width: 100%;
+                padding: 12px 15px;
+                outline: none;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                /* border: 1px solid #fff; */
+                border: none;
+                background:$mycolor2;
+                color: $mycolor1;
+                
+            }
+            button{
+                margin: 0 auto;
+                width: 120px;
+                height: 40px;
+                font-weight: 600;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                color: $mycolor2;
+                background: $mycolor1;
+                transition: all 0.3s linear;
+   
+            }
+            button:hover{
+                color:$mycolor1;
+                background: $mycolor2;
+            }
+            
+           
+        }
+        .open-popup{
+            visibility: visible;
+            top: 500%;
+            transform: translate(-50%,-50%) scale(1);
+        }
+        .menu{
+            color: $mycolor1;
+            background: none;
+            border: none;
+            display: none;
+           
+        }
+        
+
+       
+    }
+
+
+    .hero{
+        padding-top: 7%;
+        padding-left: 15%;
+       
+
+        img{
+            width: 375px;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            padding-left: 4rem;
+            font-size: 3rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight:700;
+            color: $mycolor3;
+            position: absolute;
+            top: 59%;
+            
+            
+        }
+        h1{
+            padding-left: 6rem;
+            font-size: 4rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight:700;
+            color: $mycolor1;
+        }
+    }
+
+    .sd1{
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        z-index: 1;
+    }
+
+}

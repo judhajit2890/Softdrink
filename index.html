@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamm Milk</title>
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-------------------header-------------------->
+    <section class="header"id="header">
+        <nav>
+            <a href="#header" class="logo"><img src="./img/logo.png"></a>
+            <ul id="menubar">
+                <li><a href="#header" class="active">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="shopping"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            </ul>
+            <!-------------------popup-------------------->
+            <button type="submit"class="fa-solid fa-user sign" onclick="openPopup()"></button>
+            <div class="popup" id="popup">
+                <span><img src="./img/logo.png"></span>
+                <input type="email" placeholder="Your Email-id">
+                <input type="password" placeholder="Password">
+                <p>Create An account><a href="#">Sign up</a></p>
+                <button type="submit" onclick="closePopup()">Sign in</button>
+            </div>
+            <button class="fa-solid fa-bars menu"></button>
+        </nav>
+
+
+        <!--------------------hero------------------------>
+        <div class="hero">
+            <img src="./img/logo.png" alt="">
+            <h2>Open up</h2>
+            <h1>Flavors!</h1>
+        </div>
+        <img class="sd1" src="./img/background/shapedivider12.png" alt="">
+    </section>
+
+
+    <!-----------------header end--------------------->
+
+
+
+
+    <!-----------------story start--------------------->
+
+
+
+    <section class="story" id="story">
+        <div class="inner">
+            <h1>Our Story</h1>
+            <div class="stroybox">
+                <div class="details">
+                    <h4>Our objective was to provide proper marketing facilities for the milk producers of the district.</h4>
+                    <p>Our Goal is constantly been innovating, be it launching new products, creative marketing campaigns, or challenging traditional societal trends to come up with better ones. </p>
+                    <p>Large trading companies take to the streets to open small retail stores, also known as kiosks. One of these platforms is the Yamm Milk franchise, which is a major player in the dairy industry.</p>
+                </div>
+                <div class="image">
+                    <img src="./img/logo.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <img class="sd2" src="./img/background/shapedivider23.png" alt="">
+    </section>
+
+    <!----------------product------------->
+    <section class="product" id="product">
+        <div class="inner">
+            <h1>Product</h1>
+            <div class="product-details">
+                <div class="canimage" id="canimage"></div>
+                <div class="candetails">
+                    <h3 id="pname">Strawberry</h3>
+                    <p id="benifit">The health benefits of Strawberry Milk include Its property as the best immunity booster. </p>
+                </div>
+                <div class="splashimage" id="splashimage"></div>
+            </div>
+            <ul>
+                <li><button><img id="can1"src="./img/button/png/can1.png" alt=""></button></li>
+                <li><button><img id="can2"src="./img/button/png/can2.png" alt=""></button></li>
+                <li><button><img id="can3"src="./img/button/png/can3.png" alt=""></button></li>
+                <li><button><img id="can4"src="./img/button/png/can4.png" alt=""></button></li>
+                <li><button><img id="can5"src="./img/button/png/can5.png" alt=""></button></li>
+                <li><button><img id="can6"src="./img/button/png/can6.png" alt=""></button></li>
+                <li><button><img id="can7"src="./img/button/png/can7.png" alt=""></button></li>
+                <li><button><img id="can8"src="./img/button/png/can8.png" alt=""></button></li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!----------------shop------------->
+    <section class="shop" id="shop">
+        <div class="inner">
+            <h1>Shop</h1>
+            <div class="shopdrink">
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop1.jpg" alt="">
+                    <div class="text">
+                        <h5>Strawberry</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>55</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop2.jpg" alt="">
+                    <div class="text">
+                        <h5>Mango</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>45</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop3.jpg" alt="">
+                    <div class="text">
+                        <h5>Chocolate</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>50</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop4.jpg" alt="">
+                    <div class="text">
+                        <h5>Pista</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>70</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop5.jpg" alt="">
+                    <div class="text">
+                        <h5>Coconut</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>45</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop6.jpg" alt="">
+                    <div class="text">
+                        <h5>Kesar</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>65</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop7.jpg" alt="">
+                    <div class="text">
+                        <h5>Coffee</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>70</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+                <div class="box"data-tilt>
+                    <img src="./img/shop/jpg/shop8.jpg" alt="">
+                    <div class="text">
+                        <h5>Honey</h5>
+                        <i class="fa-solid fa-rupee-sign"></i><span>55</span>
+                    </div>
+                    <a href=""><i class="fa-solid fa-cart-shopping sc"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------contact------------->
+    <section class="contact" id="contact">
+        <div class="inner">
+            <h1>Contact</h1>
+
+            <div class="contact-details">
+                <form action="#" onsubmit="return validation();">
+                    <h5>Love to Help</h5>
+                   
+                    <input type="name" placeholder="Your Name"id="user">
+                    <span id="uname"></span>
+                    <input type="email" placeholder="Your Email-Id"id="email">
+                    <span id="mail"></span>
+                    <textarea type="textarea" cols="30" rows="5" placeholder="Massage"id="massage"></textarea>
+                    <span id="mass"></span>
+                    <input class="btn" type="Submit">
+
+                </form>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117881.96496321297!2d88.49280094999996!3d22.58615595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275350398a5b9%3A0x75e165b244323425!2sNewtown%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1662038107473!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!----------------footer------------->
+    <footer>
+        <div class="inner">
+            <div class="footer-details">
+                <div class="col">
+                    <img class="logo"src="./img/logo.png" alt="">
+                    <h4>Contact</h4>
+                    <h6><strong>Address:</strong> <span>7 AC BLOCK, ROAD 67, RAJARHAT. KOLKATA</span></h6>
+                    <h6><strong>Phone:</strong> <span>(+91) 012345 6789</span></h6>
+                    <h6><strong>Hours:</strong> <span>10:00-18:00. Mon-Friday</span></h6>
+                    <h4 class="flow">Follow Us</h4>
+                    <div class="social-media">
+                       <i class="fa-brands fa-facebook"></i>
+                       <i class="fa-brands fa-twitter"></i>
+                       <i class="fa-brands fa-instagram"></i>
+                       <i class="fa-brands fa-pinterest"></i>
+                       <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                
+
+                <div class="about">
+                   <h4>About</h4>
+                   <h5><a href="#">About Us</a></h65>
+                   <h5><a href="#">Delivery Information</a></h5>
+                   <h5><a href="#">privacy Policy</a></h5>
+                   <h5><a href="#">Terms & Condition</a></h5>
+                   <h5><a href="#">contact us</a></h5>
+
+                </div>
+            
+                <div class="payment">
+                   <h5>Secured Payment Gateways</h5>
+                   <img src="./img/pay.png" alt="">
+                </div>
+            </div>
+            <h6 class="copy">&copy 2022. Pictograph-HTML CSS Tourist Template</h6>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/vanilla-tilt.js"></script>
+
+    
+</body>
+</html>
